@@ -14,12 +14,27 @@
     --dark-charcoal: hsl(24, 5%, 18%);
 
     // ### Fonts
+    // Font-family
     --ff-title: 'Young Serif', serif;
     --ff-body: 'Outfit', sans-serif;
 
+    // Font-weight
     --fw-normal: 400;
     --fw-semi_bold: 600;
     --fw-bold: 700;
+
+    // Font-size
+    --fs-100: 1.05rem;
+    --fs-400: 1.3rem;
+    --fs-500: 1.9rem;
+    --fs-700: 2.3rem;
+
+    // ### Padding
+    --padding-400: 1.5rem;
+    --padding-600: 2.8rem;
+
+    // ### Margin
+    --margin-400: 1.5rem;
 }
 // Reset
 /* Box sizing rules */
@@ -95,4 +110,125 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+// general styles
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-100);
+    line-height: 1.5rem;
+    color: var(--dark-charcoal);
+}
+// recipe styles
+article {
+    background-color: var(--white);
+    height: 100%;
 
+    .article-container {
+        padding-inline: 1.5rem;
+    }
+    h2 {
+        font-family: var(--ff-title);
+        color: var(--nutmeg);
+        font-size: var(--fs-500);
+    }
+    
+    li {
+        line-height: 2;
+    }
+}
+@media (min-width: 30rem) {
+    body {
+        background-color: var(--eggshell);
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6rem;
+    }
+    article {
+        padding: var(--padding-600);
+        max-width: 47rem;
+        border-radius: 1rem;
+        
+        img {
+            border-radius: 1rem;
+        }
+    }
+}
+.recipe-title {
+    font-family: var(--ff-title);
+    font-size: var(--fs-700);
+}
+.info-box {
+    background-color: var(--rose-white);
+    border-radius: 1rem;
+
+    h3 {
+        color: var(--dark-raspberry);
+        font-size: var(--fs-400);
+    }
+    ul {
+        padding-left: 1rem;
+    }
+}
+section {
+    ol {
+        list-style: none;
+        counter-reset: instructions;
+        padding-left: 0;
+        
+        li {
+            counter-increment: instructions;
+            padding-left: 2.5rem;
+            position: relative;
+
+            &::before {
+                content: counter(instructions) ". ";
+                color: var(--nutmeg);
+                font-weight: var(--fw-bold);
+                display: block;
+                position: absolute;
+                left: 0.7rem;
+            }
+        }    
+    }
+    
+}
+.nutrition {
+    list-style-type: none;
+    padding-left: 0;
+                    
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 3rem;
+
+        & span {
+            color: var(--nutmeg);
+        
+        }
+    }
+
+}
+// Utilities
+.padding-all-400 {
+    padding: var(--padding-400);
+}
+.padding-all-600 {
+    padding: var(--padding-600);
+}
+.padding-block-400 {
+    padding-block: var(--padding-400);
+}
+.padding-left-400 {
+    padding-left: var(--padding-400);
+}
+.margin-block-400 {
+    margin-block: var(--margin-400);
+}
+.border-bottom {
+    border-bottom: 1px solid var(--light-grey);
+}
+.bold-span {
+    font-weight: var(--fw-bold);
+}
