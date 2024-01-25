@@ -17,5 +17,4 @@
 
 # Ignore the following directories
 node_modules/
-public/
 design/
