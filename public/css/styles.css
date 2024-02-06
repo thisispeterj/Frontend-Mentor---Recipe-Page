@@ -1,1 +1,226 @@
-:root{--nutmeg:#854632;--dark-raspberry:#7b284f;--white:#fff;--rose-white:#fff5fa;--eggshell:#f3e6d8;--light-grey:#e4ded8;--wenge-brown:#5f574e;--dark-charcoal:#302d2c;--ff-title:"Young Serif",serif;--ff-body:"Outfit",sans-serif;--fw-normal:400;--fw-semi_bold:600;--fw-bold:700;--fs-100:1.05rem;--fs-400:1.3rem;--fs-500:1.9rem;--fs-700:2.3rem;--padding-400:1.5rem;--padding-600:2.8rem;--margin-400:1.5rem}*,:after,:before{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}blockquote,body,dd,dl,figure,h1,h2,h3,h4,p{margin:0}ol[role=list],ul[role=list]{list-style:none}body{line-height:1.5;min-height:100vh}button,h1,h2,h3,h4,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){-webkit-text-decoration-skip:ink;color:currentColor;text-decoration-skip-ink:auto}img,picture{display:block;max-width:100%}button,input,select,textarea{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}body{color:var(--dark-charcoal);font-family:var(--ff-body);font-size:var(--fs-100);line-height:1.5rem}article{background-color:var(--white);height:100%}article .article-container{padding-inline:1.5rem}article h2{color:var(--nutmeg);font-family:var(--ff-title);font-size:var(--fs-500)}article li{line-height:2}@media (min-width:30rem){body{background-color:var(--eggshell)}main{align-items:center;display:flex;justify-content:center;padding:6rem}article{max-width:47rem;padding:var(--padding-600)}article,article img{border-radius:1rem}}.recipe-title{font-family:var(--ff-title);font-size:var(--fs-700)}.info-box{background-color:var(--rose-white);border-radius:1rem}.info-box h3{color:var(--dark-raspberry);font-size:var(--fs-400)}.info-box ul{padding-left:1rem}section ol{counter-reset:instructions;list-style:none;padding-left:0}section ol li{counter-increment:instructions;padding-left:2.5rem;position:relative}section ol li:before{color:var(--nutmeg);content:counter(instructions) ". ";display:block;font-weight:var(--fw-bold);left:.7rem;position:absolute}.nutrition{list-style-type:none;padding-left:0}.nutrition li{display:grid;grid-template-columns:1fr 1fr;padding-left:3rem}.nutrition li span{color:var(--nutmeg)}.padding-all-400{padding:var(--padding-400)}.padding-all-600{padding:var(--padding-600)}.padding-block-400{padding-block:var(--padding-400)}.padding-left-400{padding-left:var(--padding-400)}.margin-block-400{margin-block:var(--margin-400)}.border-bottom{border-bottom:1px solid var(--light-grey)}.bold-span{font-weight:var(--fw-bold)}
+:root {
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+  --ff-title: "Young Serif", serif;
+  --ff-body: "Outfit", sans-serif;
+  --fw-normal: 400;
+  --fw-semi_bold: 600;
+  --fw-bold: 700;
+  --fs-100: 1.05rem;
+  --fs-400: 1.3rem;
+  --fs-500: 1.9rem;
+  --fs-700: 2.3rem;
+  --padding-400: 1.5rem;
+  --padding-600: 2.8rem;
+  --margin-400: 1.5rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-100);
+  line-height: 1.5rem;
+  color: var(--dark-charcoal);
+  background-color: var(--eggshell);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+}
+
+article {
+  background-color: var(--white);
+  height: 100%;
+  padding: var(--padding-600);
+  max-width: 47rem;
+  border-radius: 1rem;
+}
+article h2 {
+  font-family: var(--ff-title);
+  color: var(--nutmeg);
+  font-size: var(--fs-500);
+}
+article li {
+  line-height: 2;
+}
+
+.recipe-title {
+  font-family: var(--ff-title);
+  font-size: var(--fs-700);
+}
+
+.info-box {
+  background-color: var(--rose-white);
+  border-radius: 1rem;
+}
+.info-box h3 {
+  color: var(--dark-raspberry);
+  font-size: var(--fs-400);
+}
+.info-box ul {
+  padding-left: 1rem;
+}
+
+section ol {
+  list-style: none;
+  counter-reset: instructions;
+  padding-left: 0;
+}
+section ol li {
+  counter-increment: instructions;
+  padding-left: 2.5rem;
+  position: relative;
+}
+section ol li::before {
+  content: counter(instructions) ". ";
+  color: var(--nutmeg);
+  font-weight: var(--fw-bold);
+  display: block;
+  position: absolute;
+  left: 0.7rem;
+}
+
+.nutrition {
+  list-style-type: none;
+  padding-left: 0;
+}
+.nutrition li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 3rem;
+}
+.nutrition li span {
+  color: var(--nutmeg);
+}
+
+.padding-all-400 {
+  padding: var(--padding-400);
+}
+
+.padding-all-600 {
+  padding: var(--padding-600);
+}
+
+.padding-block-400 {
+  padding-block: var(--padding-400);
+}
+
+.padding-left-400 {
+  padding-left: var(--padding-400);
+}
+
+.margin-block-400 {
+  margin-block: var(--margin-400);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.bold-span {
+  font-weight: var(--fw-bold);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0;
+  }
+}
